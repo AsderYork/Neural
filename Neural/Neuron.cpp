@@ -12,11 +12,6 @@ const char * Mismatch_exception::What()
 
 Neuron::Neuron(int _Dim, std::vector<TYPE> _W, std::function<TYPE(std::vector<TYPE>&, std::vector<TYPE>&)> _SF, std::function<TYPE(TYPE)> _AF)
 {
-
-	if (_W.size() != Dimension + 1)
-	{
-		throw Mismatch_exception("Yup, mismatch");
-	}
 	Dimension = _Dim;
 	Wheights = _W;
 	SummateFunc = _SF;
